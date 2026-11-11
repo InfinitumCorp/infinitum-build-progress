@@ -29,7 +29,7 @@ jobs:
           echo "" >> PROGRESS.md
           echo "## Repository Status" >> PROGRESS.md
           echo "" >> PROGRESS.md
-          gh api --paginate /orgs/InfinitumCorp/repos --jq '.[] | "- [\(.name)](\(.html_url)): updated \(.updated_at), open issues: \(.open_issues_count)"' >> PROGRESS.md || echo "Note: Using user repos or limited access" >> PROGRESS.md
+          gh api --paginate /users/InfinitumCorp/repos --jq '.[] | "- [\(.name)](\(.html_url)): updated \(.updated_at), open issues: \(.open_issues_count), language: \(.language // "n/a")"' >> PROGRESS.md || echo "Note: Failed to list repos" >> PROGRESS.md
           echo "" >> PROGRESS.md
           echo "---" >> PROGRESS.md
           echo "*Automated. Website source is never modified by this process.*" >> PROGRESS.md
