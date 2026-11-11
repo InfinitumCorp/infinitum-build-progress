@@ -31,3 +31,11 @@ Not in git. Set them where Scalus or Conjure runs.
 - DeepSeek: [platform.deepseek.com/api_keys](https://platform.deepseek.com/api_keys). New balance is $0 until a top-up. The chat app does not issue a key.
 - SiliconFlow: [cloud.siliconflow.cn](https://cloud.siliconflow.cn/account/ak) or [siliconflow.com](https://siliconflow.com).
 - Ollama: `OLLAMA_BASE_URL=http://localhost:11434/v1`.
+
+## Social rankers, 2026-11-11 20:10 UTC
+
+Survey: [infinitum-nexus docs/OSS-FEATURE-SURVEY-3-2026-11-11.md](https://github.com/InfinitumCorp/infinitum-nexus/blob/main/docs/OSS-FEATURE-SURVEY-3-2026-11-11.md). The general 50 from the same day is `docs/OSS-INTEGRATION-SURVEY-3-2026-11-11.md`.
+
+On main in Zerkalo (`3cf840c`): `zerkalo/feed_rank.py` scores a draft with the Apache-2.0 X For You value model. Weights multiply predicted probabilities, not raw counts. The rehearsal feed is unchanged. Phoenix and the moderation filters were not copied.
+
+Not done: no tracker was added to a website or an app. AGPL trees (old `twitter/the-algorithm`, Mastodon, Matomo) were not copied. TikTok, Instagram, Snapchat, Reddit, WeChat, and YouTube have not published the ranker that runs their feed.
